@@ -36,8 +36,8 @@ def block_ip(bpf, ip_addr_str):
 
 def main():
     INTERFACE = "enp0s3"
-    # IPs block list
-    block_list = ["8.8.8.8", "1.1.1.1"]
+    # IPs block list - add IPs you want to block here (example : ["192.168.59.192","192.168.59.180"] )
+    block_list = ["8.8.8.8", "1.1.1.1"] # Example IPs to block (google DNS and Cloudflare DNS)
 
     # Load and attach eBPF program
     bpf = load_bpf_program()
