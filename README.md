@@ -86,9 +86,10 @@ sudo apt-get install -y bpfcc-tools \
 
 ```
 .
-├── simple_firewall.py         # Python loader (attaches XDP, manages maps, prints logs)
+├── simple_firewall.py  # Python loader (attaches XDP, manages maps, prints logs)
 └── simple_firewall.c   # eBPF/XDP program (drops packets from blocked IPs)
 ```
+---
 
 ## 📸 Results
 
