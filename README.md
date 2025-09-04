@@ -90,6 +90,24 @@ sudo apt-get install -y bpfcc-tools \
 └── simple_firewall.c   # eBPF/XDP program (drops packets from blocked IPs)
 ```
 
+## 📸 Results
+
+When blocking traffic from `1.1.1.1` and running:
+
+   ```bash
+      ping -c4 1.1.1.1
+   ```
+
+➡️ **Firewall output** (Python userspace):
+<div align="center">
+  <img src="./images/drop-packets-by-firewall.png" alt="Nginx running" width="50%" style="border: 1px solid #000; border-radius: 5px;">
+</div>
+
+➡️ **Ping result** (blocked traffic):
+<div align="center">
+  <img src="./images/cant-ping-due-firewall.png" alt="Nginx running" width="50%" style="border: 1px solid #000; border-radius: 5px;">
+</div>
+
 ---
 
 ## 📖 Notes
