@@ -28,6 +28,7 @@ def print_debug_event(cpu, data, size):
     src_ip = ctypes.cast(data, ctypes.POINTER(ctypes.c_uint32)).contents.value
     print(f"Packet from {socket.inet_ntoa(struct.pack('!L', src_ip))} dropped")
 
+# Function to add an IP address to the block list
 def block_ip(bpf, ip_addr_str):
     ip_addr = struct.unpack("!I", socket.inet_aton(ip_addr_str))[0]
     bpf["blocked_ips_map"][ctypes.c_uint32(ip_addr)] = ctypes.c_uint8(1)
