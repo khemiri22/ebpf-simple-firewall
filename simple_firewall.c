@@ -11,7 +11,7 @@
     *
     * Compile with:
     * clang -O2 -target bpf -g -c simple_firewall.c -o simple_firewall.o
-    * Note: -g is for debug info, uncomment SEC("license") and SEC("xdp") lines if you are loading the program manually with bpftool.
+    * Note: -g is for debug info, uncomment SEC("license") and SEC("xdp") lines before compiling with clang.
     *
     * Load and attach with a Python script using BCC.
     *
